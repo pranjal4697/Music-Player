@@ -1,17 +1,19 @@
-import os
+﻿import os
 import pygame
 from tkinter import *
 from tkinter.filedialog import askdirectory
 from mutagen.id3 import ID3,TIT2
 from tkinter.font import Font
+import matplotlib
 
 pygame.init()
 root=Tk()
+
 audio=ID3()
 text=Text(root)
 helv=Font(family="Helvetica",size=100,weight="bold")
 text.configure(font=helv)
-root.wm_title("beatBOX")
+root.wm_title("boomBOX")
 #Creating a window
 root.minsize(500,500)
 #making a list for songs
@@ -106,7 +108,7 @@ def noOfSongs():
 		for i in listofsongs:
 			numberofsongs+=1
 
-listbox=Listbox(root,selectmode=MULTIPLE,width=100,height=30,bg="cyan",fg="black")
+listbox=Listbox(root,selectmode=MULTIPLE,width=100,height=30,bg="coral",fg="black")
 listbox.pack(fill=X)
 
 vol=Scale(root,from_=40,to=0,orient=HORIZONTAL,resolution=20,command=show_value)   
@@ -116,7 +118,8 @@ vol.set(10)
 directorychooser()
 #Working on GUI
 #Giving label
-label=Label(root,text="BeatBox",font="helv")
+
+label=Label(root,text="BoomBox",font="helv")
 label.pack()
 
 realnames.reverse()
