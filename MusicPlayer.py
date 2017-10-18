@@ -6,8 +6,6 @@ from mutagen.id3 import ID3,TIT2
 from tkinter.font import Font
 import matplotlib
 
-
-
 pygame.init()
 root=Tk()
 
@@ -132,8 +130,6 @@ for items in realnames:
 
 realnames.reverse()
 
-
-
 framemiddle =Frame(root,width=250,height=30)
 framemiddle.pack()
 
@@ -143,7 +139,6 @@ framedown.pack()
 
 mutebutton = Button(framedown,text="Mute", activebackground="red")
 mutebutton.pack(side=LEFT)
-
 
 previousbutton= Button(framedown,text="◄◄", activebackground="green")
 previousbutton.pack(side=LEFT)
@@ -159,9 +154,6 @@ nextbutton.pack(side=LEFT)
 
 playbutton=Button(framedown,text="►")
 playbutton.pack(side=LEFT)
-
-
-
 
 
 
