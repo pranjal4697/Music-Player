@@ -130,7 +130,6 @@ for items in realnames:
 
 realnames.reverse()
 
-
 framemiddle =Frame(root,width=250,height=30)
 framemiddle.pack()
 
@@ -138,23 +137,25 @@ framemiddle.pack()
 framedown =Frame(root,width=400,height=300)
 framedown.pack()
 
-mutebutton = Button(framedown,text="Mute")
+mutebutton = Button(framedown,text="Mute", activebackground="red")
 mutebutton.pack(side=LEFT)
 
-nextbutton= Button(framedown,text="►►")
-nextbutton.pack(side=LEFT)
-
-previousbutton= Button(framedown,text="◄◄")
+previousbutton= Button(framedown,text="◄◄", activebackground="green")
 previousbutton.pack(side=LEFT)
 
-stopbutton= Button(framedown,text="■")
+stopbutton= Button(framedown,text="■", activebackground="red" )      #has no functionality
 stopbutton.pack(side=LEFT)
+
+pausebutton = Button(framedown,text="►/║║")
+pausebutton.pack(side=LEFT)
+
+nextbutton= Button(framedown,text="►►", activebackground="green")
+nextbutton.pack(side=LEFT)
 
 playbutton=Button(framedown,text="►")
 playbutton.pack(side=LEFT)
 
-pausebutton = Button(framedown,text="►/║║")
-pausebutton.pack(side=LEFT)
+
 
 
 mutebutton.bind("<Button-1>",mutesong)
